@@ -60,7 +60,7 @@ describe('Protractor Sync steps', function () {
         element(by.partialLinkText('Checkout')).click();
 
         var count = 0;
-        element.all(by.css('tr td.col-sm-1.col-md-1.text-center:nth-child(4)')).each(function (item) {
+        element.all(by.css('tr > td.col-sm-1.col-md-1.text-center:nth-child(4)')).each(function (item) {
             item.element(by.tagName('strong')).getText().then(function (text) {
                 count += Number(text.split(' ')[1]);
             })
